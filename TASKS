@@ -1,0 +1,2 @@
+TODO research shebang/s and the best way to do them for a virutalenv ...considering the repo will exist on other computers too
+TODO configure for packaging with python setuptools/click
