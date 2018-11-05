@@ -1,3 +1,4 @@
+#!.venv/bin/python3
 
 # import sys
 # sys.argv
@@ -8,6 +9,10 @@ import fire
 ## ? ff-tabs [in-name] [out-name]   # assuming jsonlz4, the moz fmt
 
 # def fetch():
+# cp 
+#   ~/Library/Application\ Support/Firefox/profiles/x98wumfy.default/sessionstore-backups/recovery.jsonlz4
+#   data/raw/$(date +"recovery.jsonlz4.%F.%T")
+
 def extract(infile, outfile):
 
     f = open(infile, 'rb')
