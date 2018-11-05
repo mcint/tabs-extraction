@@ -8,7 +8,13 @@ import fire
 ## TODO get args - 
 ## ? ff-tabs [in-name] [out-name]   # assuming jsonlz4, the moz fmt
 
-# def fetch():
+def fetch():
+    from glob import glob
+    paths = glob('/Users/mcint/Library/Application Support/Firefox/Profiles/*/sessionstore-backups/recovery.jsonlz4')
+    
+    # TODO copy to data/raw/  as recovery.jsonlz4.ymd.hms
+    # TODO return new path to data/raw/ file
+
 # cp 
 #   ~/Library/Application\ Support/Firefox/profiles/x98wumfy.default/sessionstore-backups/recovery.jsonlz4
 #   data/raw/$(date +"recovery.jsonlz4.%F.%T")
