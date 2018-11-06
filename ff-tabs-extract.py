@@ -45,7 +45,17 @@ def extract(infile, outfile):
     fw = open(outfile, 'wb')
     fw.write(json)
     
-    return 'Succeeded'
+    return outfile
+
+def backup():
+    """Fetches and extracts saved session state to persistent and readable backup"""
+    import os
+    src = fetch()
+    tgtfname = os.path.basename(src).replace('.jsonlz4.','.json.')
+    outpath = 'data/out'
+    tgt = os.path.join(outpath, tgtfname)
+    return extract(src, tgt)
+
 
 if __name__ == '__main__':
     fire.Fire()
