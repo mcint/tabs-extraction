@@ -34,7 +34,7 @@ def fetch():
 #   data/raw/$(date +"recovery.jsonlz4.%F.%T")
 
 def extract(infile, outfile):
-
+    """Decompress saved state from Mozilla's jsonlz4 with custom header bytes to json"""
     f = open(infile, 'rb')
     _mozilla_magic_prefix = f.read(8)
     jsonlz4 = f.read()
